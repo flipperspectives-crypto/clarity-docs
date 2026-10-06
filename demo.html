@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Clarity: demo walkthrough (cold start)</title><style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:860px;margin:2rem auto;padding:0 1rem;line-height:1.55;color:#1b1b1b}
+blockquote{background:#fff4e5;border-left:6px solid #e67e00;margin:1rem 0;padding:.6rem 1rem}
+table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:.35rem .5rem;text-align:left}
+code,pre{background:#f4f4f4}pre{padding:.8rem;overflow-x:auto}a{color:#0b5fff}</style></head><body><p><small><a href="index.html">← Clarity docs home</a> · <a href="demo.md">raw markdown</a></small></p><h1>Clarity: demo walkthrough (cold start)</h1>
+<blockquote>
+<p><strong>⚠️ STATUS (checked 2026-10-06 10:22 AM ET): Clarity's live paid API is DOWN / offline.</strong>
+The paid origin <code>https://desktop-o99r0sf.tail935fba.ts.net</code> ($2.00 <code>POST /v1/x402/report</code> · $0.001 <code>POST /v1/x402/chat/completions</code> · Base USDC via x402) does not resolve right now and stays offline until the Funnel origin is back.
+<strong>This site is docs only. It does not serve any paid endpoints.</strong> agent-tools.cloud is a directory listing only; it does not host Clarity's static docs.</p>
+</blockquote>
+<p>External Base USDC payers only. Do not use the host wallet.</p>
+<h2>Status</h2>
+<ul>
+<li><strong>Origin Funnel:</strong> <strong>RED / DOWN</strong> (Tailscale DNS unresolved). Treat ts.net links as offline until Funnel is GREEN.</li>
+<li><strong>Primary public origin URL:</strong> <strong>TBD</strong> until Funnel is GREEN.</li>
+<li><strong>agent-tools.cloud</strong> is a <strong>directory listing card</strong>, not Clarity's static host: it does <strong>not</strong> host Clarity's static docs or serve paid POSTs.</li>
+</ul>
+<h2>What you get (when Funnel GREEN)</h2>
+<p>Short structured research JSON. <strong>$2 USDC on Base</strong> via x402 report. Chat <strong>$0.001 USDC</strong>.</p>
+<h2>Path (when Funnel GREEN)</h2>
+<ol>
+<li>Discover: https://desktop-o99r0sf.tail935fba.ts.net/.well-known/x402</li>
+<li><code>POST /v1/x402/report</code> → HTTP <strong>402</strong> + <code>Payment-Required</code></li>
+<li>Pay with your Base USDC wallet / facilitator</li>
+<li>Retry with payment proof → JSON report</li>
+</ol>
+<p>While RED: use <strong>402 Index</strong> service pages and the <strong>agent-tools.cloud listing card</strong> for discovery pointers only: paid calls wait for Funnel GREEN.</p>
+<h2>Links</h2>
+<table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Origin well-known (RED until GREEN)</td>
+<td>https://desktop-o99r0sf.tail935fba.ts.net/.well-known/x402</td>
+</tr>
+<tr>
+<td>agent-tools listing card (directory only)</td>
+<td><a href="https://agent-tools.cloud/services/desktop-o99r0sf-tail935fba-ts-net-sub899">https://agent-tools.cloud/services/desktop-o99r0sf-tail935fba-ts-net-sub899</a></td>
+</tr>
+<tr>
+<td>402 Index report $2</td>
+<td><a href="https://402index.io/service/064c4c86-74e3-4a3e-8814-c76f403da293">https://402index.io/service/064c4c86-74e3-4a3e-8814-c76f403da293</a></td>
+</tr>
+<tr>
+<td>402 Index chat $0.001</td>
+<td><a href="https://402index.io/service/03ccd3cc-fda5-414f-a88f-95c39c61e151">https://402index.io/service/03ccd3cc-fda5-414f-a88f-95c39c61e151</a></td>
+</tr>
+<tr>
+<td>Full buyer doc</td>
+<td><a href="buy.html">buy.md</a></td>
+</tr>
+</tbody>
+</table>
+<h2>One-liner</h2>
+<p>Clarity (Base): origin currently DOWN; primary public URL TBD. Directory pointers: agent-tools.cloud listing + 402 Index. Paid report $2 / chat $0.001 resume when Funnel is GREEN. External payers only.</p>
+<h2>More docs</h2>
+<ul>
+<li><a href="buy.html">buy.md (main buyer doc)</a> · <a href="agent-buyer.html">Agent buyer</a> · <a href="buyer.html">Buyer</a> · <a href="demo.html">Demo</a></li>
+</ul></body></html>
