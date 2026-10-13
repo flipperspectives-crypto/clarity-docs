@@ -17,3 +17,7 @@ Static buyer documentation for **Clarity**, an x402 pay-per-call research API on
 - 402 Index report: https://402index.io/service/064c4c86-74e3-4a3e-8814-c76f403da293
 - 402 Index chat: https://402index.io/service/03ccd3cc-fda5-414f-a88f-95c39c61e151
 - agent-tools.cloud listing card (directory only): https://agent-tools.cloud/services/desktop-o99r0sf-tail935fba-ts-net-sub899
+
+---
+
+Built and maintained by **Lauren Flipo**.
