@@ -3,23 +3,23 @@ blockquote{background:#fff4e5;border-left:6px solid #e67e00;margin:1rem 0;paddin
 table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:.35rem .5rem;text-align:left}
 code,pre{background:#f4f4f4}pre{padding:.8rem;overflow-x:auto}a{color:#0b5fff}</style></head><body><p><small><a href="index.html">← Clarity docs home</a> · <a href="buy.md">raw markdown</a></small></p><h1>Clarity: for external x402 payers</h1>
 <blockquote>
-<p><strong>⚠️ STATUS (checked 2026-10-06 10:22 AM ET): Clarity's live paid API is DOWN / offline.</strong>
-The paid origin <code>https://desktop-o99r0sf.tail935fba.ts.net</code> ($2.00 <code>POST /v1/x402/report</code> · $0.001 <code>POST /v1/x402/chat/completions</code> · Base USDC via x402) does not resolve right now and stays offline until the Funnel origin is back.
+<p><strong>✅ STATUS (checked 2026-10-13 ~10:50 AM ET): Clarity's paid API is LIVE</strong> at <a href="https://desktop-o99r0sf.tail935fba.ts.net/.well-known/x402">https://desktop-o99r0sf.tail935fba.ts.net</a>: $2.00 <code>POST /v1/x402/report</code> · $0.001 <code>POST /v1/x402/chat/completions</code> · Base USDC via x402, external payers only.
+Uptime depends on Lauren's desktop being online, so the origin can go offline without notice.
 <strong>This site is docs only. It does not serve any paid endpoints.</strong> agent-tools.cloud is a directory listing only; it does not host Clarity's static docs.</p>
 </blockquote>
 <p>Bring your own Base USDC. Do not use the host wallet.</p>
 <h2>Status</h2>
 <ul>
-<li><strong>Origin Funnel (Tailscale):</strong> <strong>RED / DOWN</strong>. <code>desktop-o99r0sf.tail935fba.ts.net</code> does not resolve. Treat ts.net links as offline until Funnel is <strong>GREEN</strong>.</li>
-<li><strong>Primary public origin URL:</strong> <strong>TBD</strong> until the Funnel origin recovers (then: <code>https://desktop-o99r0sf.tail935fba.ts.net/.well-known/x402</code>).</li>
-<li><strong>What stays usable while RED:</strong> directory / index cards. These are <strong>not</strong> Clarity's static host and do <strong>not</strong> serve paid calls:</li>
+<li><strong>Origin (Tailscale Funnel):</strong> <strong>LIVE</strong> as of 2026-10-13 ~10:50 AM ET: <code>/health</code>, <code>/.well-known/x402</code>, <code>/static/buy.md</code> return 200; unpaid POST returns 402. Depends on Lauren's desktop being online.</li>
+<li><strong>Primary public origin URL:</strong> https://desktop-o99r0sf.tail935fba.ts.net/.well-known/x402</li>
+<li><strong>Directory / index cards</strong> (always up). These are <strong>not</strong> Clarity's static host and do <strong>not</strong> serve paid calls:</li>
 <li>agent-tools.cloud listing card: <a href="https://agent-tools.cloud/services/desktop-o99r0sf-tail935fba-ts-net-sub899">https://agent-tools.cloud/services/desktop-o99r0sf-tail935fba-ts-net-sub899</a></li>
 <li>402 Index report: <a href="https://402index.io/service/064c4c86-74e3-4a3e-8814-c76f403da293">https://402index.io/service/064c4c86-74e3-4a3e-8814-c76f403da293</a></li>
 <li>402 Index chat: <a href="https://402index.io/service/03ccd3cc-fda5-414f-a88f-95c39c61e151">https://402index.io/service/03ccd3cc-fda5-414f-a88f-95c39c61e151</a></li>
 </ul>
 <h2>One-liner</h2>
-<p>Clarity (Base mainnet x402): origin currently <strong>DOWN</strong>. Directory cards: agent-tools.cloud + 402 Index. Paid paths (<code>POST /v1/x402/report</code> $2 · <code>POST /v1/x402/chat/completions</code> $0.001) resume when the origin is back. External Base USDC payers only.</p>
-<h2>Paid products (Funnel origin: offline until GREEN)</h2>
+<p>Clarity (Base mainnet x402): paid API live at https://desktop-o99r0sf.tail935fba.ts.net (<code>POST /v1/x402/report</code> $2 · <code>POST /v1/x402/chat/completions</code> $0.001). Directory cards: agent-tools.cloud + 402 Index. Uptime depends on Lauren's desktop. External Base USDC payers only.</p>
+<h2>Paid products</h2>
 <table>
 <thead>
 <tr>
@@ -57,7 +57,7 @@ The paid origin <code>https://desktop-o99r0sf.tail935fba.ts.net</code> ($2.00 <c
 <tr>
 <td>Funnel well-known</td>
 <td>https://desktop-o99r0sf.tail935fba.ts.net/.well-known/x402</td>
-<td><strong>RED / offline</strong></td>
+<td><strong>LIVE</strong> (desktop-dependent)</td>
 </tr>
 <tr>
 <td>agent-tools.cloud</td>
@@ -76,7 +76,7 @@ The paid origin <code>https://desktop-o99r0sf.tail935fba.ts.net</code> ($2.00 <c
 </tr>
 </tbody>
 </table>
-<h2>Smoke test (only once the origin is back)</h2>
+<h2>Smoke test</h2>
 <pre><code class="language-bash">curl -sS -i https://desktop-o99r0sf.tail935fba.ts.net/v1/x402/report \
   -H 'Content-Type: application/json' \
   -d '{&quot;topic&quot;:&quot;x402 agent commerce on Base&quot;,&quot;max_words&quot;:400}'

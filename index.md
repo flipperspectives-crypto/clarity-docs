@@ -1,7 +1,7 @@
 # Clarity: x402 research API docs (Base USDC)
 
-> **⚠️ STATUS (checked 2026-10-06 10:22 AM ET): Clarity's live paid API is DOWN / offline.**
-> The paid origin `https://desktop-o99r0sf.tail935fba.ts.net` ($2.00 `POST /v1/x402/report` · $0.001 `POST /v1/x402/chat/completions` · Base USDC via x402) does not resolve right now and stays offline until the Funnel origin is back.
+> **✅ STATUS (checked 2026-10-13 ~10:50 AM ET): Clarity's paid API is LIVE** at [https://desktop-o99r0sf.tail935fba.ts.net](https://desktop-o99r0sf.tail935fba.ts.net/.well-known/x402): $2.00 `POST /v1/x402/report` · $0.001 `POST /v1/x402/chat/completions` · Base USDC via x402, external payers only.
+> Uptime depends on Lauren's desktop being online, so the origin can go offline without notice.
 > **This site is docs only. It does not serve any paid endpoints.** agent-tools.cloud is a directory listing only; it does not host Clarity's static docs.
 
 Static buyer documentation for **Clarity**, an x402 pay-per-call research API on Base mainnet.

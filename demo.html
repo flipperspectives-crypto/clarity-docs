@@ -3,27 +3,27 @@ blockquote{background:#fff4e5;border-left:6px solid #e67e00;margin:1rem 0;paddin
 table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:.35rem .5rem;text-align:left}
 code,pre{background:#f4f4f4}pre{padding:.8rem;overflow-x:auto}a{color:#0b5fff}</style></head><body><p><small><a href="index.html">← Clarity docs home</a> · <a href="demo.md">raw markdown</a></small></p><h1>Clarity: demo walkthrough (cold start)</h1>
 <blockquote>
-<p><strong>⚠️ STATUS (checked 2026-10-06 10:22 AM ET): Clarity's live paid API is DOWN / offline.</strong>
-The paid origin <code>https://desktop-o99r0sf.tail935fba.ts.net</code> ($2.00 <code>POST /v1/x402/report</code> · $0.001 <code>POST /v1/x402/chat/completions</code> · Base USDC via x402) does not resolve right now and stays offline until the Funnel origin is back.
+<p><strong>✅ STATUS (checked 2026-10-13 ~10:50 AM ET): Clarity's paid API is LIVE</strong> at <a href="https://desktop-o99r0sf.tail935fba.ts.net/.well-known/x402">https://desktop-o99r0sf.tail935fba.ts.net</a>: $2.00 <code>POST /v1/x402/report</code> · $0.001 <code>POST /v1/x402/chat/completions</code> · Base USDC via x402, external payers only.
+Uptime depends on Lauren's desktop being online, so the origin can go offline without notice.
 <strong>This site is docs only. It does not serve any paid endpoints.</strong> agent-tools.cloud is a directory listing only; it does not host Clarity's static docs.</p>
 </blockquote>
 <p>External Base USDC payers only. Do not use the host wallet.</p>
 <h2>Status</h2>
 <ul>
-<li><strong>Origin Funnel:</strong> <strong>RED / DOWN</strong> (Tailscale DNS unresolved). Treat ts.net links as offline until Funnel is GREEN.</li>
-<li><strong>Primary public origin URL:</strong> <strong>TBD</strong> until Funnel is GREEN.</li>
+<li><strong>Origin (Tailscale Funnel):</strong> <strong>LIVE</strong> as of 2026-10-13 ~10:50 AM ET. Depends on Lauren's desktop being online, so it can go offline.</li>
+<li><strong>Primary public origin URL:</strong> https://desktop-o99r0sf.tail935fba.ts.net/.well-known/x402</li>
 <li><strong>agent-tools.cloud</strong> is a <strong>directory listing card</strong>, not Clarity's static host: it does <strong>not</strong> host Clarity's static docs or serve paid POSTs.</li>
 </ul>
-<h2>What you get (when Funnel GREEN)</h2>
+<h2>What you get</h2>
 <p>Short structured research JSON. <strong>$2 USDC on Base</strong> via x402 report. Chat <strong>$0.001 USDC</strong>.</p>
-<h2>Path (when Funnel GREEN)</h2>
+<h2>Path</h2>
 <ol>
 <li>Discover: https://desktop-o99r0sf.tail935fba.ts.net/.well-known/x402</li>
 <li><code>POST /v1/x402/report</code> → HTTP <strong>402</strong> + <code>Payment-Required</code></li>
 <li>Pay with your Base USDC wallet / facilitator</li>
 <li>Retry with payment proof → JSON report</li>
 </ol>
-<p>While RED: use <strong>402 Index</strong> service pages and the <strong>agent-tools.cloud listing card</strong> for discovery pointers only: paid calls wait for Funnel GREEN.</p>
+<p>Discovery pointers also on <strong>402 Index</strong> service pages and the <strong>agent-tools.cloud listing card</strong> (directory only; paid calls go to the origin).</p>
 <h2>Links</h2>
 <table>
 <thead>
@@ -34,7 +34,7 @@ The paid origin <code>https://desktop-o99r0sf.tail935fba.ts.net</code> ($2.00 <c
 </thead>
 <tbody>
 <tr>
-<td>Origin well-known (RED until GREEN)</td>
+<td>Origin well-known (live, desktop-dependent)</td>
 <td>https://desktop-o99r0sf.tail935fba.ts.net/.well-known/x402</td>
 </tr>
 <tr>
@@ -56,7 +56,7 @@ The paid origin <code>https://desktop-o99r0sf.tail935fba.ts.net</code> ($2.00 <c
 </tbody>
 </table>
 <h2>One-liner</h2>
-<p>Clarity (Base): origin currently DOWN; primary public URL TBD. Directory pointers: agent-tools.cloud listing + 402 Index. Paid report $2 / chat $0.001 resume when Funnel is GREEN. External payers only.</p>
+<p>Clarity (Base): paid API live at https://desktop-o99r0sf.tail935fba.ts.net (report $2 / chat $0.001). Directory pointers: agent-tools.cloud listing + 402 Index. Uptime depends on Lauren's desktop. External payers only.</p>
 <h2>More docs</h2>
 <ul>
 <li><a href="buy.html">buy.md (main buyer doc)</a> · <a href="agent-buyer.html">Agent buyer</a> · <a href="buyer.html">Buyer</a> · <a href="demo.html">Demo</a></li>
